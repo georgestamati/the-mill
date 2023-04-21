@@ -1,0 +1,14 @@
+<section class="layout">
+  <h3>Pick a category</h3>
+  <div class="categories-content" *ngIf="categories.length > 0">
+      <button *ngFor="let category of categories" class="category-content" (click)="openCategory(category._id)">
+          <div class="category-text">
+            <h1 class="category-title">{{category.title}}</h1>
+        </div>
+      </button>
+  </div>
+
+  <div class="exception-content" *ngIf="loading$.value">
+      <h2>Loading...</h2>
+  </div>
+</section>

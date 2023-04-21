@@ -1,0 +1,9 @@
+<div
+  *ngIf="hToMidnight || mToMidnight || sToMidnight"
+  [matTooltip]="tooltipText"
+  matTooltipPosition="below"
+>
+  <span> {{ hToMidnight }} Hrs</span>
+  <span> {{ mToMidnight }} Min</span>
+  <span> {{ sToMidnight }} S</span>
+</div>

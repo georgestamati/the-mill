@@ -1,0 +1,15 @@
+<ng-container *ngIf="product">
+  <div *ngIf="isProductDetail && showHeader" class="header-content">
+    <button class="button-classic" (click)="goBackToProducts()">Back to Products</button>
+    <app-count-down></app-count-down>
+  </div>
+  <div class="product-image">
+    <img [src]="product.image.sourceUrl" [alt]="product.image.title">
+  </div>
+
+  <div class="product-text">
+    <h1 class="product-title">{{product.name}}</h1>
+    <div class="product-price">Price: {{product.price}}</div>
+    <p *ngIf="isProductDetail" class="product-description">{{product.description}}</p>
+  </div>
+</ng-container>

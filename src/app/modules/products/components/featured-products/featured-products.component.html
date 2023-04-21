@@ -1,0 +1,6 @@
+<div class="products-content" *ngIf="products.length > 0">
+  <div class="featured-title">Browse featured products from this category</div>
+  <ng-container *ngFor="let product of products">
+      <app-product class="product-content" [product]="product" [showHeader]="false" (click)="openProduct(product)"></app-product>
+  </ng-container>
+</div>

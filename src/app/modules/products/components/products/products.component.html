@@ -1,0 +1,14 @@
+<section class="layout">
+  <div class="header-content">
+    <button class="button-classic" (click)="goBackToCategories()">Back to Categories</button>
+  </div>
+  <div class="products-content" *ngIf="products.length > 0">
+      <ng-container *ngFor="let product of products">
+          <app-product class="product-content" [product]="product" (click)="openProduct(product)"></app-product>
+      </ng-container>
+  </div>
+
+  <div class="exception-content" *ngIf="loading$.value">
+      <h2>Loading...</h2>
+  </div>
+</section>

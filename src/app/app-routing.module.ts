@@ -13,6 +13,11 @@ const routes: Routes = [
     loadChildren: () => import ('./modules/products/products.module').then((m) => m.ProductsModule)
   },
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent,
   }
